@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "svpm"
+dynamic = ["version"]
+
+description = "Stencils, Versions, & Patches Manager. A tool to handle automated text replacement in your project in a safe and controlled manner with built-in support for version manipulation such as bumping and parsing."
+readme = 'README.md'
+license = "MIT"
+
+authors = [
+        { name = "Samuel Lotz", email = "salotz@salotz.info"},
+]
+maintainers = [
+        { name = "Samuel Lotz", email = "salotz@salotz.info"},
+]
+keywords = ['patching', 'version manager']
+
+requires-python = ">=3.9"
+dependencies = [
+    "click",
+    "semver",
+]
+
+[project.urls]
+
+repository = "https://github.com/examol-corp/svpm"
+homepage = "https://github.com/examol-corp/svpm"
+
+[project.scripts]
+svpm = "svpm.cli:cli"
+
